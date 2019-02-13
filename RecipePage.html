@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>  
+   
+    <title>Creator of Whiz Website</title> 
+    
+    <body style= "background-image: url(image/background.jpg);background-size: cover;background-attachment: fixed"></body>
+    
+    
+    
+    </head>
+    <div class="header">
+
+     <div class="navbar" id='nav'>
+
+       <ul class="nav">
+          <li><a href="file:///C:/Users/asus/Desktop/SEM3/mad/food/MainPage.html">Main Page</a></li>
+       	  <li><a href="file:///C:/Users/asus/Desktop/SEM3/mad/food/CreatorPage.html">Creator</a></li>
+       	  <li><a href="file:///C:/Users/asus/Desktop/SEM3/mad/food/RecipePage.html">Recipes</a></li>
+       	  <li>Food Place</li>
+       	  <li>Video</li>
+       </ul>
+
+	 </div>
+
+</div>
+
+<div class="box"></div>
+
+
+<!-- add some javascript code -->
+
+   <script type="text/javascript">
+   	
+   	 var  nav = document.getElementById('nav');
+      
+      window.onscroll = function(){
+
+      	if (window.pageYOffset >50) {
+
+      		nav.style.background = "url(https://webgradients.com/public/webgradients_png/014%20Amy%20Crisp.png)";
+            nav.style.backgroundSize = "100% 100%";
+      		nav.style.boxShadow = "0px 4px 2px black";
+            nav.style.opacity = "0.9";
+      	}
+      	else{
+      		nav.style.background = "none";
+      		nav.style.boxShadow = "none";
+      	}
+      }
+
+
+
+   </script>
+
+
+
+<!-- add css style -->
+
+<style type="text/css">
+	   
+	   *{
+	   	padding: 0px;
+	   	margin:0px;
+	   	box-sizing: border-box;
+	   }
+
+	   .navbar{
+	   	width: 100%;
+	   	padding: 20px;
+	   	position: fixed;
+	   	top: 0px;
+	   	text-align: center;
+	   	transition: .5s;
+	   }
+
+	   .navbar ul li{
+	   	list-style-type: none;
+	   	display:inline-block;
+	   	padding: 10px 50px;
+	   	color: black;
+	   	font-size: 24px;
+	   	font-family: sans-serif;
+	   	cursor: pointer;
+	   	border-radius:10px;
+	   	transition: .5s;
+	   }
+
+	   .navbar ul li:hover{
+        background-image: url(https://webgradients.com/public/webgradients_png/048%20Strong%20Bliss.png);
+        background-size: "100% 100%";
+        border: solid;
+           border-color: black;
+           display: inline-block;
+           cursor: pointer;
+	   }
+      
+     
+ 
+
+</style>
+    <br><br><br><br><br><br><br>
+    <center>
+     <h3>This website is about</h3>
+ 
+</center>
+</html>
