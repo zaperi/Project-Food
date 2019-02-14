@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Main Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        
+        <script type="text/javascript">
+            $(window).on('scroll',function(){
+                if($(window).scrollTop()){
+                    $('nav').addClass('black');
+                }
+                else{
+                    $('nav').removeClass('black');
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapper"></div>
+        <nav>
+            <div class="food"></div>
+             
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Log In</a></li>
+
+            </ul>
+        </nav>
+        
+        <section class="sec1"><div class="text">
+        <h1>FOOD</h1>
+        </div></section>
+        <section class="sec2">
+        
+        </section>
+      <div class="button">
+            
+        <button class="menu" onclick="myMenu()">MENU</button>
+        
+        <button class="categories" onclick="myCategories()">CATEGORIES</button>
+
+        <button class="recipe" onclick="myRecipe()">RECIPE</button>
+          
+         <button class="place" onclick="myPlace">PLACE</button>
+        
+          </div>
+    </body>
+</html>
