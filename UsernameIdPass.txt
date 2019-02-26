@@ -1,0 +1,7 @@
+id login
+id zhafri
+pass 1234
+id wazir
+pass 1234
+id imran
+pass 1234
