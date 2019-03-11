@@ -1,54 +1,81 @@
 <!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Main Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-        
-        <script type="text/javascript">
-            $(window).on('scroll',function(){
-                if($(window).scrollTop()){
-                    $('nav').addClass('black');
-                }
-                else{
-                    $('nav').removeClass('black');
-                }
-            })
-        </script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Login page</title>
+         <body style= "background-image: url(image/background.jpg);background-size: cover;background-attachment: fixed;"></body>
     </head>
     <body>
-        <div class="wrapper"></div>
-        <nav>
-            <div class="food"></div>
-             
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Log In</a></li>
-
-            </ul>
-        </nav>
+        <center>
+        <p style="background-color: whitesmoke; width: 400px; opacity: 0.8; border-style: double; border-width: 8px"><b> </b>  
+     
+<img src="image/knifespoonlogo2.png"; width="400px"> <br>
         
-        <section class="sec1"><div class="text">
-        <h1>FOOD</h1>
-        </div></section>
-        <section class="sec2">
         
-        </section>
-      <div class="button">
+<img src="image/Wiz%20Food.png"; width="150"></p>   
+        
+        <br> <br>
             
-        <button class="menu" onclick="myMenu()">MENU</button>
         
-        <button class="categories" onclick="myCategories()">CATEGORIES</button>
-
-        <button class="recipe" onclick="myRecipe()">RECIPE</button>
-          
-         <button class="place" onclick="myPlace">PLACE</button>
-        
-          </div>
+            
+        <h2 style="background-color: darksalmon; width: 400px; opacity: 0.8; border-style: double; border-width: 8px"><b>Please Login first:</b>
+        <form name="login">
+            Username &nbsp; <input type="text" name="userid"/>
+            <br><br>
+            Password &nbsp; <input type="password" name="pswrd"/>
+            <br><br>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+            </form> </h2>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "zhafri" && form.pswrd.value == "1234" || form.userid.value == "wazir" && form.pswrd.value == "1234" || form.userid.value == "imran" && form.pswrd.value == "1234") {
+                    window.open URL("file:///C:/Users/asus/Desktop/android_app/Wiz%20Food%20Application/www/MainPage.html","_self")/*opens the target page while Id & password matches*/
+                                       alert("You have succefully login")
+                                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+            </script>
+        </center>
     </body>
 </html>
